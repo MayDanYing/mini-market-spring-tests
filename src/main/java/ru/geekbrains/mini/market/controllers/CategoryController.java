@@ -26,4 +26,9 @@ public class CategoryController {
         Category category = categoryService.getOneById(id).orElseThrow(() -> new ResourceNotFoundException("Unable to find category with id: " + id));
         return new CategoryDto(category);
     }
+
+    @GetMapping
+    public List<Category> getAllCategories() {
+        return categoryService.findAll();
+    }
 }
