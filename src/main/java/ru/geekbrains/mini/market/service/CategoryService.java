@@ -26,4 +26,8 @@ public class CategoryService {
     public Optional<Category> findByTitle(String title) {
         return categoryRepository.findByTitle(title);
     }
+
+    public List<Category> findAll() {
+        return categoryRepository.findAll();
+    }
 }
